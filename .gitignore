@@ -1,5 +1,8 @@
 .vscode
 Logs
 Temp
-Library
-Tetris.sln
+/Library/Artifacts
+/Library/BurstCache
+/Library/PackageCache
+/Library/ShaderCache
+/Library/StateCache
