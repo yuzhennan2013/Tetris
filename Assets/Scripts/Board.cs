@@ -12,10 +12,13 @@ public class Board : MonoBehaviour
     {
         this.tilemap = GetComponentInChildren<Tilemap>();
         this.activePiece = GetComponentInChildren<Piece>();
-        foreach (var data in tetrominos)
-        {
-            data.Initialize();
+        for (int i = 0; i < tetrominos.Length; i++) {
+            tetrominos[i].Initialize();
         }
+        // foreach (var data in tetrominos)
+        // {
+        //     Debug.Log(data);
+        // }
     }
 
     private void Start()
@@ -34,9 +37,9 @@ public class Board : MonoBehaviour
 
     public void Set(Piece piece)
     {
-        foreach (Vector3Int cell in piece.cells)
+        for (int i = 0; i < piece.cells.Length; i++) 
         {
-            Vector3Int worldPosition = piece.position + cell;
+            Vector3Int worldPosition = piece.position + piece.cells[i];
             tilemap.SetTile(worldPosition, piece.data.tile);
         }
     }
