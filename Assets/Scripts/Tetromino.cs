@@ -21,6 +21,6 @@ public struct TetrominoData
     public void Initialize()
     {
         this.cells = Data.Cells[tetromino];
-        Debug.Log(cells);
+        // Debug.Log(cells);
     }
 }

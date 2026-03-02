@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,5 +23,28 @@ public class Piece : MonoBehaviour
         {
             this.cells[i] = (Vector3Int)data.cells[i];
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Move(Vector3Int.left);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Move(Vector3Int.right);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Move(Vector3Int.down);
+        }
+    }
+
+    private void Move(Vector3Int translation)
+    {
+        Vector3Int newPosition = position;
+        newPosition.x += translation.x;
+        newPosition.y += translation.y;
     }
 }
