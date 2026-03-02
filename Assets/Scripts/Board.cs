@@ -15,10 +15,6 @@ public class Board : MonoBehaviour
         for (int i = 0; i < tetrominos.Length; i++) {
             tetrominos[i].Initialize();
         }
-        // foreach (var data in tetrominos)
-        // {
-        //     Debug.Log(data);
-        // }
     }
 
     private void Start()
