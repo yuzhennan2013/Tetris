@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+color staticSplashScreenBackgroundColor
+id tuanjieSurfaceView
+string FreeformWindowOrientation_landscape
+string FreeformWindowOrientation_portrait
+string FreeformWindowSize_maximize
+string FreeformWindowSize_phone
+string FreeformWindowSize_tablet
+style BaseTuanjieTheme
+style TuanjieThemeSelector
+style TuanjieThemeSelector.Translucent

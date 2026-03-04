@@ -1,0 +1,9 @@
+Using template 'C:/Program Files/Tuanjie/Hub/Editor/2022.3.62t4/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\TuanjieManifest.xml'
+
+android.hardware.vulkan.version was added because:
+	One of the graphics devices was Vulkan
+android.hardware.touchscreen.multitouch, android.hardware.touchscreen.multitouch.distinct were enabled because:
+	UnityEngine.Input::GetTouch was present in:
+		UnityEngine.UI-FeaturesChecked.txt
+	UnityEngine.Input::get_touchCount was present in:
+		UnityEngine.UI-FeaturesChecked.txt

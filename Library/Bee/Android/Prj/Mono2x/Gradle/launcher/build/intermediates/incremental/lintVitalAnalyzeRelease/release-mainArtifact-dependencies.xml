@@ -1,0 +1,17 @@
+<dependencies>
+  <compile
+      roots="D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle@@:tuanjieLibrary::release">
+    <dependency
+        name="D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle@@:tuanjieLibrary::release"
+        simpleName="Gradle:tuanjieLibrary"/>
+  </compile>
+  <package
+      roots="D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle@@:tuanjieLibrary::release,__local_aars__:D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\tuanjieLibrary\libs\unity-classes.jar:unspecified@jar">
+    <dependency
+        name="D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle@@:tuanjieLibrary::release"
+        simpleName="Gradle:tuanjieLibrary"/>
+    <dependency
+        name="__local_aars__:D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\tuanjieLibrary\libs\unity-classes.jar:unspecified@jar"
+        simpleName="__local_aars__:D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\tuanjieLibrary\libs\unity-classes.jar"/>
+  </package>
+</dependencies>

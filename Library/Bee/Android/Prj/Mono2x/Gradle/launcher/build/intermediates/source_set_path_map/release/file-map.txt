@@ -1,0 +1,9 @@
+com.yuzhennan.tetris.launcher-pngs-0 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\pngs\release
+com.yuzhennan.tetris.launcher-resValues-1 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\resValues\release
+com.yuzhennan.tetris.launcher-rs-2 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\generated\res\rs\release
+com.yuzhennan.tetris.launcher-mergeReleaseResources-3 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.yuzhennan.tetris.launcher-mergeReleaseResources-4 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.yuzhennan.tetris.launcher-merged_res-5 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\build\intermediates\merged_res\release
+com.yuzhennan.tetris.launcher-main-6 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\res
+com.yuzhennan.tetris.launcher-release-7 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\release\res
+com.yuzhennan.tetris.launcher-packaged_res-8 D:\Code\unity\Tetris\Library\Bee\Android\Prj\Mono2x\Gradle\tuanjieLibrary\build\intermediates\packaged_res\release

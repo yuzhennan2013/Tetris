@@ -1,0 +1,2 @@
+Using template 'C:/Program Files/Tuanjie/Hub/Editor/2022.3.62t4/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\LauncherManifest.xml'
+
