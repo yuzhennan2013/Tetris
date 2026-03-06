@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ControlPanel : MonoBehaviour
+public class Controller : MonoBehaviour
 {
     public Button leftArrowButton, rightArrowButton, rotateLeftButton, rotateRightButton, downButton;
     public Board board;
@@ -23,7 +23,6 @@ public class ControlPanel : MonoBehaviour
         rightArrowButton.onClick.AddListener(MoveRight);
         rotateLeftButton.onClick.AddListener(RotateLeft);
         rotateRightButton.onClick.AddListener(RotateRight);
-        downButton.onClick.AddListener(Down);
     }
 
     // Start is called before the first frame update
@@ -34,7 +33,6 @@ public class ControlPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void MoveLeft()
@@ -83,6 +81,16 @@ public class ControlPanel : MonoBehaviour
         // Add your logic for moving the piece down here
         this.board.Clear(activePiece);
         this.activePiece.Move(Vector3Int.down);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
+    }
+
+    public void HardDrop()
+    {
+        Debug.Log("Hard Drop button clicked!");
+        // Add your logic for hard dropping the piece here
+        this.board.Clear(activePiece);
+        this.activePiece.HardDrop();
         this.activePiece.tryToStep();
         this.board.Set(activePiece);
     }

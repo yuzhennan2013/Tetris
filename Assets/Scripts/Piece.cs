@@ -163,7 +163,7 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private void HardDrop()
+    public void HardDrop()
     {
         while (Move(Vector3Int.down))
         {
