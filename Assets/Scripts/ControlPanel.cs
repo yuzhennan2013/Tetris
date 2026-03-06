@@ -41,29 +41,49 @@ public class ControlPanel : MonoBehaviour
     {
         Debug.Log("Move Left button clicked!");
         // Add your logic for moving the piece left here
+        this.board.Clear(activePiece);
+        this.activePiece.Move(Vector3Int.left);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
     }
 
     public void MoveRight()
     {
         Debug.Log("Move Right button clicked!");
         // Add your logic for moving the piece right here
+        this.board.Clear(activePiece);
+        this.activePiece.Move(Vector3Int.right);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
     }
 
     public void RotateLeft()
     {
         Debug.Log("Rotate Left button clicked!");
         // Add your logic for rotating the piece left here
+        this.board.Clear(activePiece);
+        this.activePiece.Rotate(-1);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
     }
 
     public void RotateRight()
     {
         Debug.Log("Rotate Right button clicked!");
         // Add your logic for rotating the piece right here
+        this.board.Clear(activePiece);
+        this.activePiece.Rotate(1);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
     }
 
     public void Down()
     {
         Debug.Log("Down button clicked!");
         // Add your logic for moving the piece down here
+        this.board.Clear(activePiece);
+        this.activePiece.Move(Vector3Int.down);
+        this.activePiece.tryToStep();
+        this.board.Set(activePiece);
     }
 }

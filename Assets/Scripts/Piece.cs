@@ -37,35 +37,40 @@ public class Piece : MonoBehaviour
     {
         this.board.Clear(this);
         this.lockTime += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Move(Vector3Int.left);
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Move(Vector3Int.right);
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(Vector3Int.down);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            HardDrop();
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Rotate(-1);
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            Rotate(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.LeftArrow))
+        // {
+        //     Debug.Log("Left arrow pressed");
+        // }
+        // else if (Input.GetKeyDown(KeyCode.RightArrow))
+        // {
+        //     Move(Vector3Int.right);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.DownArrow))
+        // {
+        //     Move(Vector3Int.down);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     HardDrop();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     Rotate(-1);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     Rotate(1);
+        // }
+        tryToStep();
+        this.board.Set(this);
+    }
+
+    public void tryToStep()
+    {
         if (Time.time >= this.stepTime)
         {
             Step();
         }
-        this.board.Set(this);
     }
 
     private void Step()
@@ -85,7 +90,7 @@ public class Piece : MonoBehaviour
         this.board.SpawnTetromino();
     }
 
-    private void Rotate(int direction)
+    public void Rotate(int direction)
     {
         int originalRotationIndex = this.rotationIndex;
         this.rotationIndex = Wrap(this.rotationIndex + direction, 0, 4);
@@ -167,13 +172,14 @@ public class Piece : MonoBehaviour
         Lock();
     }
 
-    private bool Move(Vector3Int translation)
+    public bool Move(Vector3Int translation)
     {
         Vector3Int newPosition = position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
 
         bool valid = board.IsValidPosition(this, newPosition);
+        Debug.Log($"Trying to move piece to {newPosition}, valid: {valid}, lockTime: {lockTime}");
         if (valid) {
             position = newPosition;
             this.lockTime = 0f;
