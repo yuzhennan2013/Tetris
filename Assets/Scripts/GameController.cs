@@ -5,11 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class GameController : MonoBehaviour
 {
-    public Button leftArrowButton, rightArrowButton, rotateLeftButton, rotateRightButton, downButton;
+    public Button leftArrowButton, rightArrowButton, rotateLeftButton, rotateRightButton, settingButton;
     public Board board;
     public Piece activePiece;
+    public Canvas dialogCanvas;
 
     void Awake()
     {
@@ -18,11 +19,30 @@ public class Controller : MonoBehaviour
         this.rightArrowButton = Array.Find(buttonArray, b => b.tag == "right_arrow");
         this.rotateLeftButton = Array.Find(buttonArray, b => b.tag == "rotate_left");
         this.rotateRightButton = Array.Find(buttonArray, b => b.tag == "rotate_right");
-        this.downButton = Array.Find(buttonArray, b => b.tag == "down");
+        this.settingButton = Array.Find(buttonArray, b => b.tag == "setting");
+        Canvas[] canvasArray = GetComponentsInChildren<Canvas>();
+        // this.dialogCanvas = Array.Find(canvasArray, c => c.tag == "setting_dialog");
         leftArrowButton.onClick.AddListener(MoveLeft);
         rightArrowButton.onClick.AddListener(MoveRight);
         rotateLeftButton.onClick.AddListener(RotateLeft);
         rotateRightButton.onClick.AddListener(RotateRight);
+        settingButton.onClick.AddListener(OpenSettings);
+        // dialogCanvas.gameObject.SetActive(false);
+        dialogCanvas.enabled = false;
+    }
+
+    private void OpenSettings()
+    {
+        // dialogCanvas.gameObject.SetActive(true);
+        dialogCanvas.enabled = true;
+        if (PauseManager.instance.isPaused)
+        {
+            PauseManager.instance.ResumeGame();
+        }
+        else
+        {
+            PauseManager.instance.PauseGame();
+        }
     }
 
     // Start is called before the first frame update

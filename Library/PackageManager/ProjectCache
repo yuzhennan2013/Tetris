@@ -20,7 +20,7 @@ m_EmbeddedPackageManifests:
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/Code/unity/Tetris/Packages
-m_EditorVersion: 2022.3.62t4 (1ad14fec91c6)
+m_EditorVersion: 2022.3.62t5 (dafb34cd5fa5)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.5.1
   testable: 0
@@ -3614,6 +3614,7 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.1.0
     - 5.1.1
+    - 6.0.0
     compatible:
     - 5.1.0
     - 5.1.1
@@ -4263,6 +4264,7 @@ m_ResolvedPackages:
     - 8.0.0
     - 8.0.1
     - 8.0.2
+    - 8.88.0-exp.1
     compatible:
     - 3.1.3
     recommended: 3.1.3
@@ -5036,4 +5038,4 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
-m_BuiltInPackagesHash: c10da9d99c34ceb87b6b162d6d18a7af494d2505
+m_BuiltInPackagesHash: 25bf189799722cf7c1a902e9e71989e7c1242df4

@@ -9,6 +9,11 @@ TagManager:
   - rotate_left
   - rotate_right
   - down
+  - setting
+  - cancel
+  - ok
+  - gamecontroller
+  - setting_dialog
   layers:
   - Default
   - TransparentFX
