@@ -2,10 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Board
-    - Controller
+    - GameController
     - Ghost
     - LongPressButton
+    - PauseManager
     - Piece
+    - SettingDialogController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -15,18 +17,29 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.2D.Tilemap.Extras.Editor.dll:
+    - UnityEditor.Tilemaps.GameObjectBrush
+    - UnityEditor.Tilemaps.GroupBrush
+    - UnityEditor.Tilemaps.LineBrush
+    - UnityEditor.Tilemaps.RandomBrush
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.InputActionAssetEditor
+    - UnityEngine.InputSystem.Editor.InputActionImporterEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
+    - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Rider.Editor.dll:
@@ -37,6 +50,13 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -47,6 +67,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.RectMask2D
   serializedClasses:
     Assembly-CSharp:
     - TetrominoData
@@ -56,8 +78,9 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputBinding
     - UnityEngine.InputSystem.InputControlScheme
     - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
-    - UnityEngine.InputSystem.InputSettings/iOSSettings
-    - UnityEngine.InputSystem.iOS.PrivacyDataUsage
+    - UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent
+    - UnityEngine.InputSystem.PlayerInput/DeviceLostEvent
+    - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
@@ -68,10 +91,16 @@ ScriptsOnlyBuild:
     - TMPro.TMP_GlyphAdjustmentRecord
     - TMPro.TMP_GlyphPairAdjustmentRecord
     - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_InputField/OnChangeEvent
+    - TMPro.TMP_InputField/SelectionEvent
+    - TMPro.TMP_InputField/SubmitEvent
+    - TMPro.TMP_InputField/TextSelectionEvent
+    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -91,10 +120,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: Controller
+    fullTypeName: GameController
     methodName: Down
   - assembly: Assembly-CSharp
-    fullTypeName: Controller
+    fullTypeName: GameController
     methodName: HardDrop
   sceneClasses:
     Assets/Scenes/Tetris.scene:
@@ -121,41 +150,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 682}
     - Class: 114
-      Script: {instanceID: 17594}
+      Script: {instanceID: 17586}
     - Class: 114
-      Script: {instanceID: 17964}
+      Script: {instanceID: 17596}
     - Class: 114
-      Script: {instanceID: 18374}
+      Script: {instanceID: 17734}
     - Class: 114
-      Script: {instanceID: 18972}
+      Script: {instanceID: 17966}
     - Class: 114
-      Script: {instanceID: 19074}
+      Script: {instanceID: 18376}
     - Class: 114
-      Script: {instanceID: 19238}
+      Script: {instanceID: 18974}
     - Class: 114
-      Script: {instanceID: 19616}
+      Script: {instanceID: 19076}
     - Class: 114
-      Script: {instanceID: 20460}
+      Script: {instanceID: 19240}
     - Class: 114
-      Script: {instanceID: 20872}
+      Script: {instanceID: 19618}
     - Class: 114
-      Script: {instanceID: 21018}
+      Script: {instanceID: 20462}
     - Class: 114
-      Script: {instanceID: 21366}
+      Script: {instanceID: 20874}
     - Class: 114
-      Script: {instanceID: 22372}
+      Script: {instanceID: 20998}
     - Class: 114
-      Script: {instanceID: 23136}
+      Script: {instanceID: 21020}
     - Class: 114
-      Script: {instanceID: 23188}
+      Script: {instanceID: 21368}
     - Class: 114
-      Script: {instanceID: 23316}
+      Script: {instanceID: 22102}
     - Class: 114
-      Script: {instanceID: 24176}
+      Script: {instanceID: 22374}
     - Class: 114
-      Script: {instanceID: 24322}
+      Script: {instanceID: 23120}
     - Class: 114
-      Script: {instanceID: 25270}
+      Script: {instanceID: 23140}
+    - Class: 114
+      Script: {instanceID: 23192}
+    - Class: 114
+      Script: {instanceID: 23320}
+    - Class: 114
+      Script: {instanceID: 23380}
+    - Class: 114
+      Script: {instanceID: 23780}
+    - Class: 114
+      Script: {instanceID: 24182}
+    - Class: 114
+      Script: {instanceID: 24328}
+    - Class: 114
+      Script: {instanceID: 25276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,10 +322,10 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: a97e3881ff7e9273d4bbd06da5c89cd5
+      Hash: 9f0188ce028776a885474e0a4b22f1fd
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Controller
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -1077,6 +1120,12 @@ ScriptsOnlyBuild:
     className: Benchmark02
   - hash:
       serializedVersion: 2
+      Hash: 1f3974fa4c26edef75ed5ca40e2a8241
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseManager
+  - hash:
+      serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1135,6 +1184,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionsEditorWindow
+  - hash:
+      serializedVersion: 2
+      Hash: ab5652eb80e0bb5b04c0ba0b86e17e5d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SettingDialogController
   - hash:
       serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
@@ -1215,7 +1270,7 @@ ScriptsOnlyBuild:
     className: InputActionAssetEditor
   - hash:
       serializedVersion: 2
-      Hash: 1161614935c553edd32abd1971c6dfdb
+      Hash: 3ad692aaf036a343761e6e3943ab97c0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Piece

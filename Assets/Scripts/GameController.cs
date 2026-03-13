@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -11,6 +12,7 @@ public class GameController : MonoBehaviour
     public Board board;
     public Piece activePiece;
     public Canvas dialogCanvas;
+    public InputMap inputMap;
 
     void Awake()
     {
@@ -29,6 +31,36 @@ public class GameController : MonoBehaviour
         settingButton.onClick.AddListener(OpenSettings);
         // dialogCanvas.gameObject.SetActive(false);
         dialogCanvas.enabled = false;
+    }
+
+    private void OnEnable()
+    {
+        inputMap = new InputMap();
+        inputMap.Game.Enable();
+        inputMap.Game.Back.performed += OnQuit;
+    }
+
+    private void OnDisable()
+    {
+        if (inputMap != null)
+        {
+            inputMap.Game.Disable();
+            inputMap.Game.Back.performed -= OnQuit;
+        }
+    }
+
+    public void OnQuit(InputAction.CallbackContext ctx)
+    {
+        // Your logic here: e.g., close a menu, go back a scene, or quit the app
+        Debug.Log("Android Back button pressed!");
+
+        // Example: Go back to the previous scene
+        // You would need a scene management system to track previous scenes
+        // For simplicity, here's how to quit the application (usually for the main menu)
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            Application.Quit();
+        }
     }
 
     private void OpenSettings()

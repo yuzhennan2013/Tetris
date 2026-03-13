@@ -10,7 +10,8 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   m_BuildProfiles: []
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 2dc41706ade468b4c8ef5a293995bb4a, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: b46b82807d0ca514fbb8d688325e71ff, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 8846cc8eb7719c741bd356d192d5cbdf, type: 3}
   m_SlimFeaturesWeixinMiniGame:
     ACLDecompression: 0
     AllocateOverhead: 1
