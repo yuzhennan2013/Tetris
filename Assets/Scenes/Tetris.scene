@@ -213,8 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1202dbd9145abd347b0e155139b650bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepDelay: 1
-  lockDelay: 0.5
 --- !u!1 &164124531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,6 +2284,8 @@ MonoBehaviour:
   cancelButton: {fileID: 441863067}
   okButton: {fileID: 944029680}
   dialogCanvas: {fileID: 1084522721}
+  velocityInputField: {fileID: 558255270}
+  activePiece: {fileID: 111518643}
 --- !u!1 &1218911566
 GameObject:
   m_ObjectHideFlags: 0

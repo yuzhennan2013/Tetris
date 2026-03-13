@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class SettingDialogController : MonoBehaviour
 {
     public Button cancelButton, okButton;
     public Canvas dialogCanvas;
+    public TMP_InputField velocityInputField;
+    public Piece activePiece;
 
     void Awake()
     {
@@ -22,6 +25,14 @@ public class SettingDialogController : MonoBehaviour
     {
         this.dialogCanvas.enabled = false;
         PauseManager.instance.ResumeGame();
+        Debug.Log("velocity: " + velocityInputField.text);
+        if (float.TryParse(velocityInputField.text, out float velocity))
+        {
+            if (velocity > 0)
+            {
+                activePiece.setStepDelay(1f - (velocity - 1f) * 0.1f);
+            }
+        }
     }
 
     private void Cancel()
