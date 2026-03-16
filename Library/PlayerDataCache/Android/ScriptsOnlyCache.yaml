@@ -11,35 +11,23 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.2D.Tilemap.Extras.Editor.dll:
-    - UnityEditor.Tilemaps.GameObjectBrush
-    - UnityEditor.Tilemaps.GroupBrush
-    - UnityEditor.Tilemaps.LineBrush
-    - UnityEditor.Tilemaps.RandomBrush
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.InputActionAssetEditor
-    - UnityEngine.InputSystem.Editor.InputActionImporterEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
-    - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Rider.Editor.dll:
@@ -78,9 +66,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputBinding
     - UnityEngine.InputSystem.InputControlScheme
     - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
-    - UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent
-    - UnityEngine.InputSystem.PlayerInput/DeviceLostEvent
-    - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
@@ -148,57 +133,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 682}
+      Script: {instanceID: 686}
     - Class: 114
-      Script: {instanceID: 17586}
+      Script: {instanceID: 17600}
     - Class: 114
-      Script: {instanceID: 17596}
+      Script: {instanceID: 17738}
     - Class: 114
-      Script: {instanceID: 17734}
+      Script: {instanceID: 17970}
     - Class: 114
-      Script: {instanceID: 17966}
+      Script: {instanceID: 18380}
     - Class: 114
-      Script: {instanceID: 18376}
+      Script: {instanceID: 18978}
     - Class: 114
-      Script: {instanceID: 18974}
+      Script: {instanceID: 19080}
     - Class: 114
-      Script: {instanceID: 19076}
+      Script: {instanceID: 19244}
     - Class: 114
-      Script: {instanceID: 19240}
+      Script: {instanceID: 19622}
     - Class: 114
-      Script: {instanceID: 19618}
+      Script: {instanceID: 20468}
     - Class: 114
-      Script: {instanceID: 20462}
+      Script: {instanceID: 20880}
     - Class: 114
-      Script: {instanceID: 20874}
+      Script: {instanceID: 21004}
     - Class: 114
-      Script: {instanceID: 20998}
+      Script: {instanceID: 21026}
     - Class: 114
-      Script: {instanceID: 21020}
+      Script: {instanceID: 21374}
     - Class: 114
-      Script: {instanceID: 21368}
+      Script: {instanceID: 22108}
     - Class: 114
-      Script: {instanceID: 22102}
+      Script: {instanceID: 22380}
     - Class: 114
-      Script: {instanceID: 22374}
+      Script: {instanceID: 23126}
     - Class: 114
-      Script: {instanceID: 23120}
+      Script: {instanceID: 23146}
     - Class: 114
-      Script: {instanceID: 23140}
+      Script: {instanceID: 23198}
     - Class: 114
-      Script: {instanceID: 23192}
+      Script: {instanceID: 23326}
     - Class: 114
-      Script: {instanceID: 23320}
+      Script: {instanceID: 23386}
     - Class: 114
-      Script: {instanceID: 23380}
+      Script: {instanceID: 23786}
     - Class: 114
-      Script: {instanceID: 23780}
+      Script: {instanceID: 24188}
     - Class: 114
-      Script: {instanceID: 24182}
+      Script: {instanceID: 24334}
     - Class: 114
-      Script: {instanceID: 24328}
-    - Class: 114
-      Script: {instanceID: 25276}
+      Script: {instanceID: 25282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
